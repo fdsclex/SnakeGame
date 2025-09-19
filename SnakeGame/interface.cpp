@@ -10,8 +10,12 @@ void drawBoard(const std::vector<std::vector<char>>& board) {
         std::cout << std::endl;
     }
 }
-
-char getInput() {
-    if (_kbhit()) return _getch(); // Неконтролируемый ввод, теперь работает с <conio.h>
+void setConsoleSize(int width, int height) {
+    char cmd[50];
+    sprintf_s(cmd, "mode con: cols=%d lines=%d", width, height);
+    system(cmd);
+}                                                                                                                                                                                                                   
+char getInput() {                                                               
+    if (_kbhit()) return _getch(); // Неконтролируемый ввод, теперь работает с <conio.h>        
     return ' '; // Плейсхолдер
 }

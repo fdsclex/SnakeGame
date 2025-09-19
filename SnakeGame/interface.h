@@ -3,3 +3,4 @@
 
 void drawBoard(const std::vector<std::vector<char>>& board);
 char getInput();
+void setConsoleSize(int width, int height);

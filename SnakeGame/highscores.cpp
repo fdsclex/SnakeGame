@@ -12,7 +12,7 @@ std::vector<int> loadScores(const std::string& filename) {
     std::ifstream file(filename);
     int score;
     while (file >> score) scores.push_back(score);
-    if (scores.size() > 5) scores.resize(5); // Ограничение топ-5
+    if (scores.size() > 5) scores.resize(5);
     std::sort(scores.rbegin(), scores.rend());
     return scores;
 }
